@@ -22,4 +22,4 @@
 
 - #### Server-Side-Rendering with NextJS which also covers proxy-ing requests to backend `(which is rather complex when using getInitialProps which is called on frontend and serverless functions depending upon state)`
 
-- #### Summary of nitty-gritty details included per service basis as markdown
+- #### Summary of nitty-gritty details included per service basis as markdown in `Summary` Folder
