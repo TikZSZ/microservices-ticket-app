@@ -7,6 +7,7 @@
 - [Get Started](#get-started)
 - [Features](#features)
 - [Event-Flow Diagram](#event-flow)
+- [Pending Work](#pending-work)
 
 ### Requirements
 - [Skaffold](https://skaffold.dev/)
@@ -56,3 +57,8 @@ For Production infra/k8s includes all configuration that can be used on cloud
 ### Event-Flow
 
 ![Mongoose](./flow.png)
+
+### Pending Work
+
+1 Payment service is not yet complete 
+2 ci/cd workflow has not been set on the repo
