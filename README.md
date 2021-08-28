@@ -16,13 +16,13 @@
 ### Get Started
 For Development
 ```shell
+
 git clone https://github.com/TikZSZ/microservices-ticket-app.git
 
-# make sure minikube is running to start minikube
-
-minikube start
-
 cd ./microservices-ticket-app
+
+# Make sure minikube is running to start minikube
+minikube start
 
 skaffold dev
 ```
