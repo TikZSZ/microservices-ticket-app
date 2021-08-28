@@ -2,7 +2,34 @@
 
 ## Note: The whole workflow is in [TypeScript](https://www.typescriptlang.org/)
 
-## Some features are ->
+## This documentation includes 
+- [Requirements](#requirements)
+- [Get Started](#get-started)
+- [Features](#features)
+- [Event-Flow Diagram](#event-flow)
+
+### Requirements
+- [Skaffold](https://skaffold.dev/)
+- [Kubectl, Minikube](https://kubernetes.io/docs/tasks/tools/)
+- [Docker](https://docs.docker.com/engine/install/)
+
+### Get Started
+For Development
+```shell
+git clone https://github.com/TikZSZ/microservices-ticket-app.git
+
+# make sure minikube is running to start minikube
+
+minikube start
+
+cd ./microservices-ticket-app
+
+skaffold dev
+```
+
+For Production infra/k8s includes all configuration that can be used on cloud
+
+### Features 
 
 - #### [Async communication](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/architect-microservice-container-applications/communication-in-microservice-architecture) no inter service dependence and [JWT](https://jwt.io/) as auth mechanism
 
@@ -25,5 +52,7 @@
 - #### Server-Side-Rendering with NextJS which also covers proxy-ing requests to backend `(which is rather complex when using getInitialProps which is called on frontend and serverless functions depending upon state)`
 
 - #### Summary of nitty-gritty details included per service basis as markdown in `Summary` Folder
+
+### Event-Flow
 
 ![Mongoose](./flow.png)
