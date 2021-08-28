@@ -1,23 +1,25 @@
 # This is a microservice implementation of ticketing application
 
-# This Could be used as a reference for microservices development
+## Note: the whole workflow is in TypeScript
 
 ## Some features are ->
-----------
-###  [Async communication](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/architect-microservice-container-applications/communication-in-microservice-architecture) no inter service dependence and [JWT](https://jwt.io/) as auth mechanism 
 
-###  Events driven architecture using [Nats-Streaming](https://docs.nats.io/nats-streaming-concepts/intro#:~:text=NATS%20Streaming%20is%20a%20data,in%20the%20Go%20programming%20language.&text=NATS%20Streaming%20embeds%2C%20extends%2C%20and,under%20the%20Apache%2D2.0%20license.) with atleast once guarantee
+- ####  [Async communication](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/architect-microservice-container-applications/communication-in-microservice-architecture) no inter service dependence and [JWT](https://jwt.io/) as auth mechanism 
 
-### Kubernetes workflow with [skaffold](https://skaffold.dev/) to make life easy
+- ####  Events driven architecture using [Nats-Streaming](https://docs.nats.io/nats-streaming-concepts/intro#:~:text=NATS%20Streaming%20is%20a%20data,in%20the%20Go%20programming%20language.&text=NATS%20Streaming%20embeds%2C%20extends%2C%20and,under%20the%20Apache%2D2.0%20license.) with atleast once guarantee
 
-### Mongoose as database with database for each resource and optimistic concurrency control with some nitty-gritty features of mongoose 
+- #### Kubernetes workflow with [skaffold](https://skaffold.dev/) to make life easy
 
-### Highly decoupled and modular implementation of services
+- #### Mongoose as database with database for each resource and optimistic concurrency control with some nitty-gritty features of mongoose 
 
-### Common library for code-reuse
+- #### Isolated test cases for each service covering every aspect of service like database model, event flow and api routes
 
-### Language independent app flow for most part
+- #### Highly decoupled and modular implementation of services
 
-### Server-Side-Rendering with NextJS which also covers proxy-ing requests to backend ```(which is rather complex when using getInitialProps which is called on frontend and serverless functions)```
+- #### Common library for code-reuse
 
-### Summary of nitty-gritty details included per service basis as markdown
+- #### Language independent app flow for most part
+
+- #### Server-Side-Rendering with NextJS which also covers proxy-ing requests to backend `(which is rather complex when using getInitialProps which is called on frontend and serverless functions depending upon state)` 
+
+- #### Summary of nitty-gritty details included per service basis as markdown
