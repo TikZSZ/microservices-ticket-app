@@ -1,0 +1,84 @@
+
+apiVersion: skaffold/v2beta17
+
+kind: Config
+deploy:
+  kubectl:
+
+    manifests:
+      - ./infra/k8s/*
+  
+build:
+  local:
+    concurrency: 0
+    tryImportMissing: false
+    useBuildkit: false
+    push: false
+    useDockerCLI: false
+  artifacts:
+    - image: tikzsz/auth
+      docker:
+        dockerfile: Dockerfile
+        noCache: true
+        squash: false
+
+      context: auth
+
+      sync:
+        manual:
+          - dest: .
+            src: src/**/*.ts
+    - image: tikzsz/client
+      docker:
+        dockerfile: Dockerfile
+        noCache: false
+        squash: false
+      context: client
+      sync:
+        manual:
+          - dest: .
+            src: '**/*.ts'
+          - dest: . 
+            src: '**/*.tsx'
+    - image: tikzsz/tickets
+      docker:
+        dockerfile: Dockerfile
+        noCache: true
+        squash: false
+      context: tickets
+      sync:
+        manual:
+          - dest: .
+            src: '**/*.ts'
+    - image: tikzsz/orders
+      docker:
+        dockerfile: Dockerfile
+        noCache: true
+        squash: true
+      context: orders
+      sync:
+        manual:
+          - dest: .
+            src: '**/*.ts'
+    - image: tikzsz/expiration
+      docker:
+        dockerfile: Dockerfile
+        noCache: true
+        squash: true
+      context: expiration
+      sync:
+        manual:
+          - dest: .
+            src: '**/*.ts'
+    - image: tikzsz/payment
+      docker:
+        dockerfile: Dockerfile
+        noCache: true
+        squash: true
+      context: payment
+      sync:
+        manual:
+          - dest: .
+            src: '**/*.ts'
+
+  

@@ -1,0 +1,13 @@
+import { requireAuth } from "@tikzsztickets/common"
+import {Router,Request,Response} from "express"
+import { OrderModel } from "../models/OrdersModel"
+const router = Router()
+
+router.get('/api/orders',[requireAuth],async (req:Request,res:Response)=>{
+  const orders = await OrderModel.find({userId:req.currentUser!.id}).populate('ticket')
+
+  res.send(orders)
+})
+
+
+export {router as indexOrderRouter}
