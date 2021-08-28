@@ -12,6 +12,8 @@
 
 - #### [MongoDB](https://www.mongodb.com/cloud/atlas/lp/try2-in?utm_source=google&utm_campaign=gs_apac_india_search_core_brand_atlas_desktop&utm_term=mongodb&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=12212624347&gclid=Cj0KCQjwvaeJBhCvARIsABgTDM6qTdIi9fptvD_Yuy9uygNGkwWArBy2jIzubr_CGvTufxGWcW9nFkkaAktvEALw_wcB) as database with database for each resource and [optimistic concurrency control](https://en.wikipedia.org/wiki/Optimistic_concurrency_control) and Versioning for concurrency issues with some nitty-gritty features of mongoose
 
+- #### Redis and BullJS to deal with expiration job of orders
+
 - #### Isolated test cases for each service covering every aspect of service like database model, event flow and api routes
 
 - #### Good practices and highly decoupled and modular implementation of services
@@ -23,3 +25,8 @@
 - #### Server-Side-Rendering with NextJS which also covers proxy-ing requests to backend `(which is rather complex when using getInitialProps which is called on frontend and serverless functions depending upon state)`
 
 - #### Summary of nitty-gritty details included per service basis as markdown in `Summary` Folder
+
+
+# Event Flow of the app
+
+> ![Mongoose](./flow.png)
