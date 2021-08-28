@@ -26,7 +26,4 @@
 
 - #### Summary of nitty-gritty details included per service basis as markdown in `Summary` Folder
 
-
-# Event Flow of the app
-
-> ![Mongoose](./flow.png)
+![Mongoose](./flow.png)
